@@ -27,7 +27,7 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/sdf5h/hjgfk.git
+   git clone https://github.com/sdf4h/SSH-Key-Generator-and-Linode-Connection.git
    
 2. Установите зависимости:
      pip install -r requirements.txt

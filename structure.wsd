@@ -1,0 +1,23 @@
+@startuml
+actor User
+participant "Web App (Flask)" as WebApp
+participant "API Linode" as LinodeAPI
+participant "Linode Server" as LinodeServer
+
+User -> WebApp: Запрос на генерацию SSH-ключей
+WebApp -> WebApp: Генерация SSH-ключей (приватный и публичный)
+WebApp --> User: Отображение SSH-ключей
+
+User -> WebApp: Запрос на подключение к Linode
+WebApp -> LinodeAPI: Добавление публичного ключа на сервер
+LinodeAPI --> WebApp: Ответ об успешном добавлении ключа
+
+WebApp -> LinodeServer: Подключение по SSH с приватным ключом
+alt Успешное подключение
+    LinodeServer --> WebApp: Подтверждение подключения
+    WebApp -> User: Перенаправление на YouTube
+else Ошибка подключения
+    LinodeServer --> WebApp: Сообщение об ошибке
+    WebApp -> User: Отображение ошибки
+end
+@enduml

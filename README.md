@@ -30,18 +30,19 @@
    git clone https://github.com/sdf4h/SSH-Key-Generator-and-Linode-Connection.git
    
 2. Установите зависимости:
+   ```bash
      pip install -r requirements.txt
    
-3. Настройте переменные окружения:
+4. Настройте переменные окружения:
    Создайте файл .env в корне проекта и добавьте следующие переменные:
      LINODE_API_KEY=ваш_api_ключ_linode
    LINODE_INSTANCE_ID=ваш_id_сервера
    LINODE_USERNAME=ваш_username
    
-4. Запустите приложение:
+5. Запустите приложение:
      python app.py
    
-5. Откройте браузер и перейдите по адресу:
+6. Откройте браузер и перейдите по адресу:
      http://127.0.0.1:5000/
    
 ---
